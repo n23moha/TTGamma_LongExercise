@@ -98,6 +98,11 @@ class TTGammaProcessor(processor.ProcessorABC):
         
         ### Accumulator for holding histograms
         self._accumulator = processor.dict_accumulator({
+                'photon_pt':hist.Hist("Counts", dataset_axis, pt_axis, phoCategory_axis, lep_axis, systematic_axis),
+                'photon_eta':hist.Hist("Counts", dataset_axis, eta_axis, phoCategory_axis, lep_axis, systematic_axis),
+                'photon_chIso':hist.Hist("Counts", dataset_axis, chIso_axis, phoCategory_axis, lep_axis, systematic_axis),
+                'photon_lepton_mass_3j0t':hist.Hist("Counts",dataset_axis, mass_axis, phoCategory_axis, lep_axis, systematic_axis),
+                'M3':hist.Hist("Counts",dataset_axis, m3_axis, phoCategory_axis, lep_axis, systematic_axis),
             # 3. ADD HISTOGRAMS
             ## book histograms for photon pt, eta, and charged hadron isolation
             #'photon_pt':
